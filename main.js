@@ -58,7 +58,11 @@ class CommenterController {
     }
     async getApiKey() {
         let res = await fetch(
-            "https://us-central1-commenterai.cloudfunctions.net/generateToken"
+            "https://us-central1-commenterai.cloudfunctions.net/generateToken",
+            {
+                method: "GET",
+                mode: "no-cors"
+            }
         );
         let key = await res.text();
         return key
@@ -68,6 +72,7 @@ class CommenterController {
             `https://us-central1-commenterai.cloudfunctions.net/comment?token=${this.apiKey}`,
             {
                 method: "POST",
+                mode: "no-cors",
                 body: JSON.stringify({
                     code: data,
                     language: this.lang,
