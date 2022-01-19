@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap"
+        rel="stylesheet"
+    />
+    <link href="./tailwind.css" rel="stylesheet" />
+    <link href="./codemirror-5.64.0/lib/codemirror.css" rel="stylesheet" />
+    <link href="./codemirror-5.64.0/theme/gruvbox-dark.css" rel="stylesheet" />
+    <script src="./codemirror-5.64.0/lib/codemirror.js"></script>
+    <script src="./codemirror-5.64.0/mode/go/go.js"></script>
+    <script src="./codemirror-5.64.0/mode/python/python.js"></script>
+    <script src="./codemirror-5.64.0/mode/javascript/javascript.js"></script>
+    <script src="./codemirror-5.64.0/mode/clike/clike.js"></script>
+</head>
+<body
+    class="min-h-screen w-screen flex-col flex items-center justify-center"
+    style="font-family: 'Open Sans'"
+>
+    <div>
+        <p class="text-6xl" style="font-family: 'Lato'">
+            Focus on coding, not documenting.
+        </p>
+    </div>
+    <div class="max-w-6xl text-center mb-10">
+        <p class="text-2xl text-gray-500">
+            Slash/AI is an open source code-to-comment text transformer built by
+            Daniel Kasabov and Akil Maninnivan for HackTX 2021 (We got 2nd).
+            Feel free to test it out down below.
+        </p>
+    </div>
+    <div class="w-1/2 flex flex-col" style="background-color: #292824">
+        <div class="w-full h-6 flex flex-row" style="background-color: #e5e5e5">
+            <p
+                data-lang="go"
+                class="bg-gray-500 px-4 text-gray-200 languages cursor-pointer"
+                style="border-right: 1px solid #fff"
+            >
+                Golang
+            </p>
+            <!-- <p
+                data-lang="python"
+                class="bg-gray-300 px-4 text-gray-500 languages cursor-pointer"
+                style="border-right: 1px solid #fff"
+            >
+                Python
+            </p>
+            <p
+                data-lang="text/x-java"
+                class="bg-gray-300 px-4 text-gray-500 languages cursor-pointer"
+                style="border-right: 1px solid #fff"
+            >
+                Java
+            </p>
+            <p
+                data-lang="javascript"
+                class="bg-gray-300 px-4 text-gray-500 languages cursor-pointer"
+                style="border-right: 1px solid #fff"
+            >
+                JavaScript
+            </p> -->
+        </div>
+        <div id="editor">
+
+        </div>
+        <button
+            class="mx-auto text-gray-700 w-full py-1 bg-gray-200 font-semibold"
+            id="comment-button"
+        >
+            Auto-Comment
+        </button>
+    </div>
+    <div class="h-20 flex flex-col container justify-center">
+        <img id="loading-gif" class="mx-auto hidden" src="./Basketball.gif" width="30px" height="30px">
+    </div>
+    <div class="flex flex-col items-center justify-center">
+        <p class="text-gray-500 mb-10">
+            Slash/AI is still in alpha, as a result the comments could be absolutely gibberish.
+        </p>
+        <div class="text-xl font-semibold flex flex-row gap-x-4 underline">
+            <p>VsCode coming soon...</p>
+        </div>
+    </div>
+
+    <!-- <script src="./prism.js"></script> -->
+    <script src="./main.js"></script> 
+</body>
