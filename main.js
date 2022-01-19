@@ -61,10 +61,14 @@ class CommenterController {
             "https://us-central1-commenterai.cloudfunctions.net/generateToken",
             {
                 method: "GET",
-                mode: "no-cors"
+                mode: "cors",
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
+                }
             }
         );
         let key = await res.text();
+        console.log(key)
         return key
     }
     async submitRequest(data) {
