@@ -35,9 +35,9 @@ class CommenterController {
         }
         let beginning = this.lang === "python" ? '# COMMENT OPTIONS' : '/* COMMENT OPTIONS'
         options.forEach((e, i) => {
-            beginning += `${this.lang === "python" ? "#" : ""}\n\n\t${i}.) ${e}`
+            beginning += `\n\n${this.lang === "python" ? "#" : ""}\t${i}.) ${e}`
         })
-        beginning += this.lang === "python" ? "" : '\n\n*/\n'
+        beginning += this.lang === "python" ? "\n" : '\n\n*/\n'
         return beginning
     }
     commentController(commentButton, loader) {
