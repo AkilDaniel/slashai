@@ -9,6 +9,7 @@ class CommenterController {
             theme: "gruvbox-dark",
             lineNumbers: true,
             indentWithTabs: true,
+            value: "// Insert a code snippet and then click auto-comment!"
         });
         this.tabController(tabs);
         this.commentController(commentButton, loading);
